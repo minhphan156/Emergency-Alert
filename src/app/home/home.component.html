@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row">
+      <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Analytics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Export</a>
+          </li>
+        </ul>
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">View by date</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">View by type </a>
+          </li>
+        </ul>
+      </nav>
+      <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+        <h1>Dashboard</h1>
+        <h2>All Incidents</h2>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Time</th>                
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of reports$ | async">
+                  <td nowrap>{{item.type}} <br>phone number:{{item.phoneNumber}}</td>
+                  <td nowrap>{{item.timestamp}}</td>
+                  <td [innerHtml]="listDetails(item.compactReports)"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+  
