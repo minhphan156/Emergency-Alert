@@ -40,14 +40,9 @@
             <tbody>
               <tr *ngFor="let item of reports$ | async">
                   <td nowrap>{{item.type}} <br>phone number:{{item.phoneNumber}}</td>
-                  <td nowrap>{{item.timestamp}}</td>
-                  
-                  <div>                 
-                     <td  [innerHtml]= "listDetails(item.compactReports, item.type)"></td>
-                     <a [class.hidden]="hideToggle" (click)="toggleView()">Read {{isCollapsed? 'more':'less'}}</a>
-                    </div>
-               
-                
+                  <td nowrap>{{item.timestamp}}</td>               
+                <!--  <td [innerHtml]= "listDetails(item.compactReports, item.type)"></td> -->
+                 <td> <read-more [text]="listDetails(item.compactReports, item.type)" [maxLength]="350"></read-more> </td>
               </tr>
             </tbody>
           </table>

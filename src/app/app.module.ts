@@ -18,6 +18,7 @@ import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 import { OfficerComponent } from './officer/officer.component';
 import { DispatcherComponent } from './dispatcher/dispatcher.component';
+import { ReadMoreComponent } from './read-more/read-more.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DispatcherComponent } from './dispatcher/dispatcher.component';
     UserComponent,
     OfficerComponent,
     DispatcherComponent,
+    ReadMoreComponent,
     
   ],
   imports: [
