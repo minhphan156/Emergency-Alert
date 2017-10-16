@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { SettingComponent} from './setting/setting.component';
 import { AppComponent } from './app.component';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +21,7 @@ import { DispatcherComponent } from './dispatcher/dispatcher.component';
 
 @NgModule({
   declarations: [
+    SettingComponent,
     AppComponent,
     BsNavbarComponent,
     HomeComponent,
@@ -38,12 +40,14 @@ import { DispatcherComponent } from './dispatcher/dispatcher.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     RouterModule.forRoot([
+      { path: 'setting', component: SettingComponent },
       { path: '', component: HomeComponent },
-      { path: 'login', component: LoginComponent },
+      { path: 'login', component: LoginComponent }
+      
       
     ])
     
-    
+   
   ],
   providers: [
     HomeService

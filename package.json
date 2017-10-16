@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
+    "@types/jquery": "^3.2.13",
     "angularfire2": "^4.0.0-rc.1",
     "bootstrap": "^4.0.0-beta",
     "core-js": "^2.4.1",
@@ -28,6 +29,7 @@
     "firebase-tools": "^3.13.1",
     "g": "^2.0.1",
     "javascript": "0.0.0",
+    "read-more-directive-angular2": "0.0.5",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },
