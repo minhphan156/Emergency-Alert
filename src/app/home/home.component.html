@@ -41,7 +41,6 @@
               <tr *ngFor="let item of reports$ | async">
                   <td nowrap>{{item.type}} <br>phone number:{{item.phoneNumber}}</td>
                   <td nowrap>{{item.timestamp}}</td>               
-                <!--  <td [innerHtml]= "listDetails(item.compactReports, item.type)"></td> -->
                  <td> <read-more [text]="listDetails(item.compactReports, item.type)" [maxLength]="350"></read-more> </td>
               </tr>
             </tbody>
